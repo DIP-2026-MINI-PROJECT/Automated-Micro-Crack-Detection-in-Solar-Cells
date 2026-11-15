@@ -22,15 +22,15 @@ This MATLAB project processes electroluminescence (EL) images of photovoltaic ce
 The pipeline combines a low-rank SVD background estimate with morphological filtering to detect dark candidate regions. It uses both the total skeleton length of elongated candidates and the area of larger candidates to make a cell-level decision.
 
 ### Contributors
-Contributor names and SRNs are pending.
+Team 19, Digital Image Processing (UE24EC342AC1), PES University.
 
 ### Steps
 1. Clone this repository and open its root folder in MATLAB.
 2. Use MATLAB with Image Processing Toolbox. Arrange the ELPV files so that the repository root contains elpv_dataset/data/labels.csv and elpv_dataset/data/images/.
-3. Run the project MATLAB script. It displays the processing stages for cell0003.png and evaluates image-level predictions on confidently labelled ELPV cells.
+3. Run `micro_crack_detection` from the repository root in MATLAB. It displays the processing stages for cell0003.png and evaluates image-level predictions on confidently labelled ELPV cells.
 
 ### Outputs
-The script displays the original image and histogram, preprocessed image, SVD background and residual, DFT spectrum, filtered residual, black-hat heat map, and a red candidate-region overlay. It also reports accuracy, precision, recall, and F1 score and displays a confusion matrix. Sample input images and matching output exports are pending.
+The script displays the original image and histogram, preprocessed image, SVD background and residual, DFT spectrum, filtered residual, black-hat heat map, and a red candidate-region overlay. It also reports accuracy, precision, recall, and F1 score and displays a confusion matrix. The ten [ELPV inputs](data/) and matching [MATLAB outputs](outputs/) are included. See the [nine-stage walkthrough](outputs/cell0003_pipeline.png) and the [sample results table](outputs/samples.tsv). The verified run achieved 81.6% accuracy, 85.5% precision, 51.3% recall, and 64.2% F1 on 2,223 confidently labelled cells.
 
 ### References
 - [ELPV dataset and citation information](https://github.com/zae-bayern/elpv-dataset)
